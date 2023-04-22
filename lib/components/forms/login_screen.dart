@@ -29,6 +29,7 @@ class _LoginpageState extends State<Loginpage> {
 
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('user_email', user_email);
+       await prefs.setString('user_name', '');
 
       if (newuser != null) {
         Navigator.push(

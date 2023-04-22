@@ -28,10 +28,11 @@ class _Mentor_RegState extends State<Mentor_Reg> {
   late String mentor_bio;
   late String mentor_address;
   late String mentor_domain;
+  
   final _auth = FirebaseAuth.instance;
   late var newuser = null;
   // late var newuser = 123;
-  Future<String?> stud_reg() async {
+  Future<String?> mentor_reg() async {
     try {
       newuser = await _auth.createUserWithEmailAndPassword(
           email: mentor_email, password: mentor_password);
@@ -43,6 +44,7 @@ class _Mentor_RegState extends State<Mentor_Reg> {
         'mentor_bio': mentor_bio,
         'mentor_address': mentor_address,
         'mentor_domain': mentor_domain,
+        
       });
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('user_email', mentor_email);
@@ -204,7 +206,7 @@ class _Mentor_RegState extends State<Mentor_Reg> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      stud_reg();
+                      mentor_reg();
                     },
                     style: ButtonStyle(
                         shape:

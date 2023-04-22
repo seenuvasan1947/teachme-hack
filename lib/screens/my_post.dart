@@ -19,21 +19,20 @@ class _mypostlistState extends State<mypostlist> {
   final db = FirebaseFirestore.instance;
   final prefs = SharedPreferences.getInstance();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text(AppLocale.My_post_list.getString(context)),
+        title: Text(AppLocale.My_post_list.getString(context)),
         centerTitle: true,
         actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LangSelect()));
-                },
-                icon: Icon(Icons.language_outlined)),
-          ],
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LangSelect()));
+              },
+              icon: Icon(Icons.language_outlined)),
+        ],
       ),
       body: Column(
         children: [
@@ -42,7 +41,7 @@ class _mypostlistState extends State<mypostlist> {
               stream: db
                   .collection('posts')
                   .where("poster_name",
-                      isEqualTo: '${Getcurrentuser.crnt_user}')
+                      isEqualTo: '${Getcurrentuser.crnt_email}')
                   .snapshots(),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
@@ -56,13 +55,13 @@ class _mypostlistState extends State<mypostlist> {
                     children: snapshot.data!.docs.map((doc) {
                       return Card(
                         child: ListTile(
-                          title: Text(doc['mentor_domain']),
-                          subtitle: Text(doc['mentor_name']),
+                          title: Text(doc['post_domain']),
+                          subtitle: Text(doc['poster_name']),
                           trailing: IconButton(
                               onPressed: () async {
                                 await FirebaseFirestore.instance
                                     .collection("posts")
-                                    .doc(doc['mentor_email'])
+                                    .doc(doc['poster_mail'])
                                     .delete();
                               },
                               icon: const Icon(Icons.remove)),
@@ -79,7 +78,9 @@ class _mypostlistState extends State<mypostlist> {
                                             },
                                             icon: const Icon(Icons.close))
                                       ],
-                                      title: Text(AppLocale.My_post_details.getString(context)),
+                                      title: Text(
+                                          AppLocale.My_post_details.getString(
+                                              context)),
                                       content: Column(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
@@ -87,36 +88,39 @@ class _mypostlistState extends State<mypostlist> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                           Text(
-                                            AppLocale.Mentor_name.getString(context),
+                                          Text(
+                                            AppLocale.poster_name
+                                                .getString(context),
                                             style: TextStyle(fontSize: 24),
                                           ),
                                           const SizedBox(
                                             height: 27,
                                           ),
-                                          Text(doc['mentor_name']),
+                                          Text(doc['poster_name']),
                                           const SizedBox(
                                             height: 35,
                                           ),
-                                           Text(
-                                            AppLocale.Mentor_domain.getString(context),
+                                          Text(
+                                            AppLocale.post_domain
+                                                .getString(context),
                                             style: TextStyle(fontSize: 24),
                                           ),
                                           const SizedBox(
                                             height: 27,
                                           ),
-                                          Text(doc['mentor_domain']),
+                                          Text(doc['post_domain']),
                                           const SizedBox(
                                             height: 35,
                                           ),
-                                           Text(
-                                           AppLocale.Mentor_email.getString(context),
+                                          Text(
+                                            AppLocale.posted_data
+                                                .getString(context),
                                             style: TextStyle(fontSize: 24),
                                           ),
                                           const SizedBox(
                                             height: 27,
                                           ),
-                                          Text(doc['mentor_email']),
+                                          Text(doc['posted_data']),
                                           const SizedBox(
                                             height: 35,
                                           ),

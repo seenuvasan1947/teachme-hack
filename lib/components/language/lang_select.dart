@@ -16,7 +16,7 @@ class LangSelect extends StatefulWidget {
 
 class _LangSelectState extends State<LangSelect> {
   final FlutterLocalization localization = FlutterLocalization.instance;
-  List lang_list = ['en', 'tm', 'hi', 'ml'];
+  List lang_list = ['en', 'tm', 'hi', 'ml','ar'];
   String value = 'lang';
   var temp_lang_index = 0;
 
@@ -25,6 +25,7 @@ class _LangSelectState extends State<LangSelect> {
     S2Choice<String>(value: 'tm', title: 'Tamil'),
     S2Choice<String>(value: 'hi', title: 'Hindi'),
     S2Choice<String>(value: 'ml', title: 'Malayalam'),
+    S2Choice<String>(value: 'ar', title: 'Arabic'),
   ];
   @override
   Widget build(BuildContext context) {

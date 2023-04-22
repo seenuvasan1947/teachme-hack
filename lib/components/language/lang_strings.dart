@@ -1,3 +1,5 @@
+
+
 // ignore_for_file: constant_identifier_names
 
 mixin AppLocale {
@@ -26,7 +28,19 @@ mixin AppLocale {
 
   static const String Mentor_name = 'Mentor Name';
   static const String Mentor_email = 'Mentor Email';
+  // static const String Mentor_domain = 'Mentor Domain';
   static const String Mentor_domain = 'Mentor Domain';
+/* start */
+  static const String Mentor_bio = 'Mentor Bio';
+  static const String mentors_list = 'Mentor List';
+  static const String fav_mentors = 'Favourite Mentor';
+  static const String add_as_fav_mentor = 'Add to favourite';
+  static const String posted_data = 'Write here';
+  static const String Enter_post_Domain = 'Enter Post Domain';
+  static const String poster_name = 'Poster Name';
+  static const String post_domain = 'Post Domain';
+
+  /* end */
 
   static const String Mentor_post = 'Mentor Post';
   static const String My_post = 'My Post';
@@ -79,6 +93,15 @@ mixin AppLocale {
     devp_mail_body: 'Respected developer I need your help',
     mail_sub: 'Reg commnunication in mentorme App',
     mentor_mail_body: 'Respected Mentor I need your help',
+    /* now added */
+    Mentor_bio:'Mentor Bio',
+    mentors_list:'Mentor List',
+    fav_mentors:'Favourite Mentor',
+    add_as_fav_mentor:'Add to favourite',
+    posted_data:'Write here',
+    Enter_post_Domain:'Enter Post Domain',
+    poster_name:'Poster Name',
+    post_domain:'Post Domain',
   };
   static const Map<String, dynamic> TM = {
     welcome: 'வரவேற்கிறோம்',
@@ -112,13 +135,23 @@ mixin AppLocale {
     Post_list: 'இடுகை பட்டியல்',
     Post_details: 'இடுகை விவரங்கள்',
     Posted_by: 'பதிவிட்டவர்',
-    Unleash_your_skill: 'உங்கள் திறமையை வெளிப்படுத்துங்கள் மற்றவர்களுக்கு உதவலாம்',
+    Unleash_your_skill:
+        'உங்கள் திறமையை வெளிப்படுத்துங்கள் மற்றவர்களுக்கு உதவலாம்',
     devp_mail_body: 'மதிப்பிற்குரிய டெவலப்பர் எனக்கு உங்கள் உதவி தேவை',
     mail_sub: 'மென்டர் மீ பயன்பாட்டில் தொடர்பு குறித்து',
     mentor_mail_body: 'மதிப்பிற்குரிய வழிகாட்டி எனக்கு உங்கள் உதவி தேவை',
+     /* now added */
+    Mentor_bio:'வழிகாட்டி பயோ',
+    mentors_list:'வழிகாட்டி பட்டியல்',
+    fav_mentors:'பிடித்த வழிகாட்டி',
+    add_as_fav_mentor:'விருப்ப பட்டியலில் சேர்',
+    posted_data:'இங்கே எழுது',
+    Enter_post_Domain:'போஸ்ட் டொமைனை உள்ளிடவும்',
+    poster_name:'போஸ்டர் பெயர்',
+    post_domain:'இடுகை டொமைன்',
   };
   static const Map<String, dynamic> HI = {
-     welcome: 'स्वागत',
+    welcome: 'स्वागत',
     Enter_Your_Name: 'अपना नाम यहाँ दर्ज करें',
     Enter_Your_Email: 'अपना ईमेल दर्ज करें',
     Enter_your_Password: 'अपना कूटशब्द भरें',
@@ -153,9 +186,18 @@ mixin AppLocale {
     devp_mail_body: 'आदरणीय डेवलपर मुझे आपकी मदद की जरूरत है',
     mail_sub: 'मेंटर मी ऐप में रेग कम्युनिकेशन',
     mentor_mail_body: 'आदरणीय मेंटर मुझे आपकी मदद की जरूरत है',
+     /* now added */
+    Mentor_bio:'मेंटर बायो',
+    mentors_list:'मेंटर लिस्ट',
+    fav_mentors:'पसंदीदा सलाहकार',
+    add_as_fav_mentor:'पसंदीदा में जोड़ें',
+    posted_data:'यहाँ लिखें',
+    Enter_post_Domain:'पोस्ट डोमेन दर्ज करें',
+    poster_name:'पोस्टर का नाम',
+    post_domain:'पोस्ट डोमेन',
   };
 
-static const Map<String, dynamic> ML = {
+  static const Map<String, dynamic> ML = {
     welcome: 'സ്വാഗതം',
     Enter_Your_Name: 'നിങ്ങളുടെ പേര് നൽകുക',
     Enter_Your_Email: 'നിങ്ങളുടെ ഇമെയിൽ നൽകുക',
@@ -187,11 +229,66 @@ static const Map<String, dynamic> ML = {
     Post_list: 'പോസ്റ്റ് ലിസ്റ്റ്',
     Post_details: 'പോസ്റ്റ് വിശദാംശങ്ങൾ',
     Posted_by: 'പോസ്റ്റ് ചെയ്തത്',
-    Unleash_your_skill: 'നിങ്ങളുടെ വൈദഗ്ദ്ധ്യം അഴിച്ചുവിടുക മറ്റുള്ളവരെ സഹായിക്കാൻ അനുവദിക്കുന്നു',
+    Unleash_your_skill:
+        'നിങ്ങളുടെ വൈദഗ്ദ്ധ്യം അഴിച്ചുവിടുക മറ്റുള്ളവരെ സഹായിക്കാൻ അനുവദിക്കുന്നു',
     devp_mail_body: 'ബഹുമാനപ്പെട്ട ഡെവലപ്പർ എനിക്ക് നിങ്ങളുടെ സഹായം ആവശ്യമാണ്',
     mail_sub: 'മെന്റർ മി ആപ്പിലെ റെഗ് ആശയവിനിമയം',
-    mentor_mail_body: 'ബഹുമാനപ്പെട്ട ഉപദേഷ്ടാവ് എനിക്ക് നിങ്ങളുടെ സഹായം ആവശ്യമാണ്',
+    mentor_mail_body:
+        'ബഹുമാനപ്പെട്ട ഉപദേഷ്ടാവ് എനിക്ക് നിങ്ങളുടെ സഹായം ആവശ്യമാണ്',
+         /* now added */
+    Mentor_bio:'മെന്റർ ബയോ',
+    mentors_list:'മെന്റർ ലിസ്റ്റ്',
+    fav_mentors:'പ്രിയപ്പെട്ട ഉപദേഷ്ടാവ്',
+    add_as_fav_mentor:'പ്രിയപ്പെട്ടവയിലേക്ക് ചേർക്കുക',
+    posted_data:'ഇവിടെ എഴുതുക',
+    Enter_post_Domain:'പോസ്റ്റ് ഡൊമെയ്ൻ നൽകുക',
+    poster_name:'പോസ്റ്ററിന്റെ പേര്',
+    post_domain:'പോസ്റ്റ് ഡൊമെയ്ൻ',
   };
-
+  static const Map<String, dynamic> AR = {
+    welcome: 'مرحباً',
+    Enter_Your_Name: 'أدخل أسمك',
+    Enter_Your_Email: 'أدخل بريدك الإلكتروني',
+    Enter_your_Password: 'ادخل رقمك السري',
+    Enter_Your_Phone_Number: 'أدخل رقم هاتفك',
+    Enter_Your_Bio: 'أدخل سيرتك الذاتية',
+    Enter_Your_Address: 'أدخل عنوانك',
+    Enter_a_Value: 'أدخل قيمة',
+    Enter_Your_Domain: 'أدخل المجال الخاص بك',
+    Please_fill_out_this_form: 'يرجى ملء هذا النموذج',
+    Login: 'تسجيل الدخول',
+    Logout: 'تسجيل خروج',
+    Submit: 'يُقدِّم',
+    Save: 'يحفظ',
+    Success: 'نجاح',
+    Language: 'لغة',
+    Chat_with_developer: 'الدردشة مع المطور',
+    Register_as_mentor: 'سجل كمرشد',
+    Register_as_student: 'سجل كطالب',
+    Already_a_user_login: 'بالفعل مستخدم؟ تسجيل الدخول',
+    Mentor_name: 'اسم المرشد',
+    Mentor_email: 'البريد الإلكتروني المرشد',
+    Mentor_domain: 'مجال مينتور',
+    Mentor_post: 'مينتور بوست',
+    My_post: 'منشوري',
+    All_post: 'كل بوست',
+    My_post_list: 'قائمة المنشورات الخاصة بي',
+    My_post_details: 'تفاصيل منشوري',
+    Post_list: 'قائمة المشاركة',
+    Post_details: 'تفاصيل المنشور',
+    Posted_by: 'منشور من طرف',
+    Unleash_your_skill: 'أطلق العنان لمهاراتك ليساعد الآخرين',
+    devp_mail_body: 'مطور محترم أحتاج مساعدتك',
+    mail_sub: 'ريج التواصل في إرشادي التطبيق',
+    mentor_mail_body: 'المرشد المحترم أحتاج إلى مساعدتك',
+    /* now added */
+    Mentor_bio:'مينتور بيو',
+    mentors_list:'قائمة الموجهين',
+    fav_mentors:'مفضل مينتور',
+    add_as_fav_mentor:'أضف إلى المفضلة',
+    posted_data:'اكتب هنا',
+    Enter_post_Domain:'أدخل المجال البريدي',
+    poster_name:'اسم الملصق',
+    post_domain:'مجال آخر',
+  };
 }
-

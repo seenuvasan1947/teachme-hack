@@ -27,6 +27,7 @@ class _LangMainPageState extends State<LangMainPage> {
         const MapLocale('tm', AppLocale.TM),
         const MapLocale('hi', AppLocale.HI),
         const MapLocale('ml', AppLocale.ML),
+        const MapLocale('ar', AppLocale.AR),
 
       
       ],

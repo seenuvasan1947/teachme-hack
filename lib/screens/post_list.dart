@@ -75,11 +75,11 @@ class _postlistState extends State<postlist> {
                     children: snapshot.data!.docs.map((doc) {
                       return Card(
                         child: ListTile(
-                          title: Text(doc['mentor_domain']),
-                          subtitle: Text(doc['mentor_name']),
+                          title: Text(doc['post_domain']),
+                          subtitle: Text(doc['poster_name']),
                           trailing: IconButton(
                               onPressed: () {
-                                send(doc['mentor_email']);
+                                send(doc['poster_mail']);
                               },
                               icon: Icon(Icons.send)),
                           onTap: () {
@@ -104,35 +104,35 @@ class _postlistState extends State<postlist> {
                                             CrossAxisAlignment.start,
                                         children: [
                                            Text(
-                                           AppLocale.Mentor_name.getString(context),
+                                           AppLocale.poster_name.getString(context),
                                             style: TextStyle(fontSize: 24),
                                           ),
                                           const SizedBox(
                                             height: 27,
                                           ),
-                                          Text(doc['mentor_name']),
+                                          Text(doc['poster_name']),
                                           const SizedBox(
                                             height: 35,
                                           ),
                                            Text(
-                                            AppLocale.Mentor_domain.getString(context),
+                                            AppLocale.post_domain.getString(context),
                                             style: TextStyle(fontSize: 24),
                                           ),
                                           const SizedBox(
                                             height: 27,
                                           ),
-                                          Text(doc['mentor_domain']),
+                                          Text(doc['post_domain']),
                                           const SizedBox(
                                             height: 35,
                                           ),
                                            Text(
-                                            AppLocale.Mentor_email.getString(context),
+                                            AppLocale.posted_data.getString(context),
                                             style: TextStyle(fontSize: 24),
                                           ),
                                           const SizedBox(
                                             height: 27,
                                           ),
-                                          Text(doc['mentor_email']),
+                                          Text(doc['posted_data']),
                                           const SizedBox(
                                             height: 35,
                                           ),
@@ -143,7 +143,7 @@ class _postlistState extends State<postlist> {
                                           const SizedBox(
                                             height: 27,
                                           ),
-                                          Text(doc['poster_name']),
+                                          Text(doc['poster_mail']),
                                           const SizedBox(
                                             height: 35,
                                           ),

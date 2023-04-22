@@ -13,9 +13,11 @@ import '../components/forms/login_screen.dart';
 import '../components/provider.dart';
 
 import 'package:provider/provider.dart';
-import '../screens/mentor_post_page.dart';
+import 'post_page.dart';
 import '../screens/post_list.dart';
 import '../screens/my_post.dart';
+import 'fav_mentors.dart';
+import 'mentors_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -114,15 +116,15 @@ class _HomePageState extends State<HomePage> {
                                   builder: (context) => const postaddscreen()));
                         },
                       ),
-                      ListTile(
-                        title:  Text(AppLocale.My_post.getString(context)),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const mypostlist()));
-                        },
-                      ),
+                      // ListTile(
+                      //   title:  Text(AppLocale.My_post.getString(context)),
+                      //   onTap: () {
+                      //     Navigator.push(
+                      //         context,
+                      //         MaterialPageRoute(
+                      //             builder: (context) => const mypostlist()));
+                      //   },
+                      // ),
                       ListTile(
                         title:  Text(AppLocale.All_post.getString(context)),
                         onTap: () {
@@ -130,6 +132,24 @@ class _HomePageState extends State<HomePage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const postlist()));
+                        },
+                      ),
+                      ListTile(
+                        title:  Text(AppLocale.mentors_list.getString(context)),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const mentorList()));
+                        },
+                      ),
+                      ListTile(
+                        title:  Text(AppLocale.fav_mentors.getString(context)),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const FavMentors()));
                         },
                       ),
                       ListTile(
