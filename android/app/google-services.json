@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "934434657165",
+    "project_id": "mentor-cd69f",
+    "storage_bucket": "mentor-cd69f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934434657165:android:f1adba3b879e7e09c023c4",
+        "android_client_info": {
+          "package_name": "com.example.mentorme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934434657165-iv1vbcn6hficikq7pbml79eai2185o79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5YqDlrREj7sKzPMQnXSfQS8PfbyYMjBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934434657165-iv1vbcn6hficikq7pbml79eai2185o79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934434657165:android:317c6f4dfd64cc10c023c4",
+        "android_client_info": {
+          "package_name": "com.example.teachme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934434657165-iv1vbcn6hficikq7pbml79eai2185o79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5YqDlrREj7sKzPMQnXSfQS8PfbyYMjBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934434657165-iv1vbcn6hficikq7pbml79eai2185o79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
